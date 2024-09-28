@@ -12,8 +12,8 @@ This repository contains a backend application built with Node.js, Express, and 
 - [Database Setup](#database-setup)
 - [Running the Application](#running-the-application)
 - [Postman Collection](#postman-collection)
-- [Contributing](#contributing)
-- [License](#license)
+- [Database Dump](#database-dump)
+
 
 ## Features
 
@@ -105,10 +105,3 @@ A database dump is also provided in the zip format for your reference.
 - Replace `<repository-url>` and `<project-directory>` with the actual URL of your GitHub repository and the directory name of your project.
 - Make sure to update the `MONGODB_URI` in the `.env` section to reflect your actual MongoDB connection string.
 
-
-
-
-
-
-You’ve hit the Free plan limit for GPT-4o.
-Responses will use anoth
