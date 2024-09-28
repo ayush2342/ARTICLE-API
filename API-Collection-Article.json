@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "a79307f8-5526-4709-b0ac-a30fb2e66d33",
+		"name": "API Collection",
+		"description": "Collection for Articles and Users API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33792273"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "custom-source",
+						"value": "android-app",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ayush2342\",\n  \"email\": \"ayush1234@example.com\",\n  \"password\": \"Alert1234\",\n  \"name\": \"Ayush Sharma\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "custom-source",
+						"value": "android-app",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"Ayush2342\",\n  \"password\": \"Alert1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY3ZWEzNjJiNzY4Njk4Mzk2YzA4MDUiLCJ1c2VybmFtZSI6IkF5dXNoMjM0MiIsInBhc3N3b3JkIjoiJDJhJDEwJHVDcm9pUUtyTG9oUkFGRG5uZy9ncXUwdEc2blNZRW9Ja2t5ZGdhSXl2TlE1akx2RUJCNDFtIiwibmFtZSI6IkF5dXNoIFNoYXJtYSIsImVtYWlsIjoiYXl1c2gxMjM0QGV4YW1wbGUuY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wOS0yOFQxMTozNjoyMi4xMDFaIiwidXBkYXRlZEF0IjoiMjAyNC0wOS0yOFQxMTozNjoyMi4zNDJaIiwiX192IjowLCJpYXQiOjE3Mjc1MjQyODQsImV4cCI6MTcyNzUyNzg4NH0.4RgbAhOu7U0hRC_za7pYYIMOHLmrvn-6cUh1FKnaQ1I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/get-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"get-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY3ZjAyMGQxNGI5ZGM5MDBkM2Y2NjgiLCJ1c2VybmFtZSI6IlJhaHVsMTIiLCJwYXNzd29yZCI6IiQyYSQxMCRsTGVrand0MzBCdEVjNjlRc0ZtalQuVjRkMG5BWE4vZDA3dldTLnNEVU5BbXVobFFaaUdkeSIsIm5hbWUiOiJSYWh1bCBTaGFybWEiLCJlbWFpbCI6InJhaHVsMTJAZXhhbXBsZS5jb20iLCJjcmVhdGVkQXQiOiIyMDI0LTA5LTI4VDEyOjAxOjM2LjQwMloiLCJ1cGRhdGVkQXQiOiIyMDI0LTA5LTI4VDEyOjAxOjM2LjY3MVoiLCJfX3YiOjAsImlhdCI6MTcyNzUyNDkwNywiZXhwIjoxNzI3NTI4NTA3fQ.sA8xdP6MS0T6L3R4j27xusmIqcbWGajCy3NOeYKOniY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Multiple Rahul article\",\n  \"content\": \"Some random text in the Article. ABCD\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Article by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/articles/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"articles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "66f7f003d14b9dc900d3f665"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY3ZWEzNjJiNzY4Njk4Mzk2YzA4MDUiLCJ1c2VybmFtZSI6IkF5dXNoMjM0MiIsInBhc3N3b3JkIjoiJDJhJDEwJHVDcm9pUUtyTG9oUkFGRG5uZy9ncXUwdEc2blNZRW9Ja2t5ZGdhSXl2TlE1akx2RUJCNDFtIiwibmFtZSI6IkF5dXNoIFNoYXJtYSIsImVtYWlsIjoiYXl1c2gxMjM0QGV4YW1wbGUuY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wOS0yOFQxMTozNjoyMi4xMDFaIiwidXBkYXRlZEF0IjoiMjAyNC0wOS0yOFQxMTozNjoyMi4zNDJaIiwiX192IjowLCJpYXQiOjE3Mjc1MjU4ODMsImV4cCI6MTcyNzUyOTQ4M30.x8FXJahB4RL6wXPDtX0isr75G0Ag_AlepuLosqVyfL8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Updated Article Title 1\",\n  \"content\": \"Updated content.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/articles/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"articles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "66f7f003d14b9dc900d3f665"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmY3ZWEzNjJiNzY4Njk4Mzk2YzA4MDUiLCJ1c2VybmFtZSI6IkF5dXNoMjM0MiIsInBhc3N3b3JkIjoiJDJhJDEwJHVDcm9pUUtyTG9oUkFGRG5uZy9ncXUwdEc2blNZRW9Ja2t5ZGdhSXl2TlE1akx2RUJCNDFtIiwibmFtZSI6IkF5dXNoIFNoYXJtYSIsImVtYWlsIjoiYXl1c2gxMjM0QGV4YW1wbGUuY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wOS0yOFQxMTozNjoyMi4xMDFaIiwidXBkYXRlZEF0IjoiMjAyNC0wOS0yOFQxMTozNjoyMi4zNDJaIiwiX192IjowLCJpYXQiOjE3Mjc1MjU4ODMsImV4cCI6MTcyNzUyOTQ4M30.x8FXJahB4RL6wXPDtX0isr75G0Ag_AlepuLosqVyfL8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/articles/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"articles",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "66f7f003d14b9dc900d3f665"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
